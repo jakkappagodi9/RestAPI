@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voting System</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      #totalVotes {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <form onsubmit="handleForm(event)" id="votingform">
+      <h1>Class Monitor Vote</h1>
+      <p id="totalVotes"></p>
+      <label for="studentName">Student Name</label>
+      <input type="text" id="studentName" />
+      <label for="candidate">Choose Monitor</label>
+      <select id="candidate">
+        <option value="none">Choose candidate</option>
+        <option value="Suresh" id="candidateOne">1.Suresh</option>
+        <option value="Abhishek" id="candidateTwo">2.Abhishek</option>
+        <option value="Kavya" id="candidateThree">3.Kavya</option>
+      </select>
+      <button type="submit">Vote</button>
+    </form>
+
+    <div id="firstCandidate">
+      <h3>
+        Suresh <sub><i id="candidateOneDisplay"></i></sub>
+      </h3>
+    </div>
+    <div id="secondCandidate">
+      <h3>
+        Abhishek <sub><i id="candidateTwoDisplay"></i></sub>
+      </h3>
+    </div>
+    <div id="thirdCandidate">
+      <h3>
+        Kavya <sub><i id="candidateThreeDisplay"></i></sub>
+      </h3>
+    </div>
+  </body>
+  <script src="index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"></script>
+</html>
